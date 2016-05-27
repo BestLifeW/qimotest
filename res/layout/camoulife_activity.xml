@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ef565e"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/backicon" />
+
+    <Button
+        android:id="@+id/xiaoyuanpingmiantu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bt_style2"
+        android:text="校园平面图"
+        android:textColor="#722e2d"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/xinshengzhinan"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/xiaoyuanfengjing"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bt_style2"
+        android:text="新生指南"
+        android:textColor="#722e2d"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/xiaoyuanfengjing"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/xiaoyuanpingmiantu"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bt_style2"
+        android:text="校园风景"
+        android:textColor="#722e2d"
+        android:textSize="30sp" />
+
+</RelativeLayout>

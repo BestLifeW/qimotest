@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe16c"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <Button
+        android:id="@+id/bt_xianluchaxun"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/title"
+        android:background="@drawable/bt_style2"
+        android:text="线路查询"
+        android:textColor="#74592e"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/bt_wodeweizhi"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/bt_xianluchaxun"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_style2"
+        android:text="我的位置"
+        android:textColor="#74592e"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/bt_guanjiandianchaxun"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/bt_wodeweizhi"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bt_style2"
+        android:text="关键点查询"
+        android:textColor="#74592e"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/backicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/backicon" />
+
+</RelativeLayout>

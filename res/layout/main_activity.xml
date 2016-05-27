@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3f3c51"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="195dp"
+        android:layout_below="@id/title"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/banner"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/campusLife"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt1"
+            android:paddingLeft="50dp"
+            android:text="学校生活"
+            android:textColor="#722e2d"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/trafficAssist"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt2"
+            android:paddingLeft="50dp"
+            android:text="出行指南"
+            android:textColor="#74592e"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/scenery"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt3"
+            android:paddingLeft="50dp"
+            android:text="游玩厦门"
+            android:textColor="#69c654"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/phoneAssist"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bt4"
+            android:paddingLeft="53dp"
+            android:text="号码百事通"
+            android:textColor="#888787"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+</RelativeLayout>

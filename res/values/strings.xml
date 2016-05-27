@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">掌上理工</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_campus_scenery_activicty">CampusSceneryActivicty</string>
+    <string name="title_activity_xianluchaxun">Xianluchaxun</string>
+    <string name="title_activity_wodeweizhi">Wodeweizhi</string>
+    <string name="title_activity_guanjiandianchaxun">Guanjiandianchaxun</string>
+
+</resources>
