@@ -8,6 +8,7 @@ import com.baidu.mapapi.model.LatLng;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 
 public abstract class BaseBaiduMap extends Activity {
 
@@ -34,22 +35,25 @@ public abstract class BaseBaiduMap extends Activity {
 
 	public abstract void init();
 
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		// 在activity执行onDestroy时执行mMapView.onDestroy()，实现地图生命周期管理
-		mMapView.onDestroy();
-		finish();
-	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		// 在activity执行onResume时执行mMapView. onResume ()，实现地图生命周期管理
 		mMapView.onResume();
+		Log.i("baidu1", "回复");
 	}
 
 	@Override
 	protected void onPause() {
+		super.onPause();
+		mMapView.onPause();
+		Log.i("baidu1", "暂停");
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		mMapView.onDestroy();
+		Log.i("baidu1", "销毁");
 	}
 }

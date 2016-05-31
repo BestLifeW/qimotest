@@ -1,39 +1,36 @@
 package com.wtc433.trafficAssist;
 
-import com.wtc433.R;
-import com.wtc433.R.id;
-import com.wtc433.R.layout;
-import com.wtc433.R.menu;
+import com.baidu.mapapi.search.core.SearchResult;
+import com.baidu.mapapi.search.poi.PoiCitySearchOption;
+import com.baidu.mapapi.search.poi.PoiDetailResult;
+import com.wtc433.PoiSearchBaseActivity;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Toast;
 
-public class Guanjiandianchaxun extends Activity {
+public class Guanjiandianchaxun extends PoiSearchBaseActivity {
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.guanjiandianchaxun_activity);
+	public void poiSearchInit() {
+		poiSearch.searchInCity(getSearchParams());
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.guanjiandianchaxun, menu);
-		return true;
+	private PoiCitySearchOption getSearchParams() {
+		PoiCitySearchOption params = new PoiCitySearchOption();
+		params.city("厦门");
+		params.keyword("kfc");
+
+		return params;
 	}
 
+	/** 获取兴趣点详情信息 */
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+	public void onGetPoiDetailResult(PoiDetailResult result) {
+		if (result == null || result.error != SearchResult.ERRORNO.NO_ERROR) {
+			Toast.makeText(getApplicationContext(), "没有搜索到相关的信息", 1).show();
+			return;
 		}
-		return super.onOptionsItemSelected(item);
+
+		Toast.makeText(getApplicationContext(), result.getShopHours() + ", " + result.getTelephone(), 1).show();
 	}
+
 }

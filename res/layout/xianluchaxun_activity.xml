@@ -15,52 +15,66 @@
         android:layout_below="@+id/title"
         android:clickable="true" />
 
-    <ImageView
-        android:id="@+id/backicon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/title"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="15dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/backicon" />
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="#fff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#E0EEE0"
         android:orientation="horizontal" >
 
-        <EditText
-            android:id="@+id/qishidian"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="起始点" >
+            android:text="在" />
+
+        <EditText
+            android:id="@+id/city_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京" >
+
+            <requestFocus />
         </EditText>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="到"
-            android:textSize="25sp" />
+            android:text="市内找" />
 
         <EditText
-            android:id="@+id/zhongdian"
+            android:id="@+id/searchkey_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="终点" />
+            android:text="467" />
 
-        <Button
-            android:id="@+id/bt_search"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="搜索" />
+            android:text="公交车" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/busline_search_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1"
+                android:text="开始" />
+
+            <Button
+                android:id="@+id/nextline_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1"
+                android:text="下一条" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
